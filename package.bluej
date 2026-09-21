@@ -20,6 +20,7 @@ dependency6.type=UsesDependency
 dependency7.from=Picture
 dependency7.to=Circle
 dependency7.type=UsesDependency
+<<<<<<< Updated upstream
 dependency8.from=Picture
 dependency8.to=Person
 dependency8.type=UsesDependency
@@ -29,6 +30,14 @@ editor.fx.0.x=420
 editor.fx.0.y=98
 objectbench.height=204
 objectbench.width=742
+=======
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+objectbench.height=82
+objectbench.width=727
+>>>>>>> Stashed changes
 package.divider.horizontal=0.6
 package.divider.vertical=0.6661392405063291
 package.editor.height=414
