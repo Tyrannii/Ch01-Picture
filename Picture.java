@@ -1,92 +1,145 @@
 /**
- * This class represents a simple picture. You can draw the picture using
- * the draw method. But wait, there's more: being an electronic picture, it
- * can be changed. You can set it to black-and-white display and back to
- * colors (only after it's been drawn, of course).
- *
- * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * 
+ *
+ *
+ * @author Colten R. Aguilar
+ * @version 2026.09.20
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
+    private Square sky1;
+    private Square sky2;
+    private Square grass1;
+    private Square grass2;
+    private Square lake;
+    private Triangle mountain1;
+    private Triangle mountain2;
+    private Triangle mountain3;
     private Circle sun;
-    private Circle sun2;
+    private Person person;
     private boolean drawn;
 
-    /**
-     * Constructor for objects of class Picture
-     */
+    
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
+        sky1 = new Square();
+        sky2 = new Square();
+        grass1 = new Square();
+        grass2 = new Square();
+        lake = new Square();
+        mountain1 = new Triangle();
+        mountain2 = new Triangle();
+        mountain3 = new Triangle();
         sun = new Circle();
-        sun2 = new Circle();
+        person = new Person();
         drawn = false;
     }
 
-    /**
-     * Draw this picture.
-     */
+   
     public void draw()
     {
-        if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
-            
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
-    
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
-    
+        if (!drawn) {
+
+            // Blue sky background
+            sky1.changeColor("blue");
+            sky1.moveHorizontal(-330);
+            sky1.moveVertical(-130);
+            sky1.changeSize(300);
+            sky1.makeVisible();
+
+            sky2.changeColor("blue");
+            sky2.moveHorizontal(-30);
+            sky2.moveVertical(-130);
+            sky2.changeSize(300);
+            sky2.makeVisible();
+
+            // Green ground
+            grass1.changeColor("green");
+            grass1.moveHorizontal(-330);
+            grass1.moveVertical(100);
+            grass1.changeSize(300);
+            grass1.makeVisible();
+
+            grass2.changeColor("green");
+            grass2.moveHorizontal(-30);
+            grass2.moveVertical(100);
+            grass2.changeSize(300);
+            grass2.makeVisible();
+
+            // Lake
+            lake.changeColor("blue");
+            lake.moveHorizontal(-100);
+            lake.moveVertical(210);
+            lake.changeSize(200);
+            lake.makeVisible();
+
+            // Left mountain
+            mountain1.changeColor("black");
+            mountain1.changeSize(100, 150);
+            mountain1.moveHorizontal(-100);
+            mountain1.moveVertical(20);
+            mountain1.makeVisible();
+
+            // Middle mountain
+            mountain2.changeColor("black");
+            mountain2.changeSize(130, 180);
+            mountain2.moveHorizontal(20);
+            mountain2.moveVertical(0);
+            mountain2.makeVisible();
+
+            // Right mountain
+            mountain3.changeColor("black");
+            mountain3.changeSize(90, 140);
+            mountain3.moveHorizontal(130);
+            mountain3.moveVertical(30);
+            mountain3.makeVisible();
+
+            // Sun
             sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
+            sun.moveHorizontal(120);
+            sun.moveVertical(-50);
+            sun.changeSize(60);
             sun.makeVisible();
-            
-            sun2.changeColor("magenta");
-            sun2.moveHorizontal(-100);
-            sun2.changeSize(80);
-            sun2.makeVisible();
-            
+
+            // Person
+            person.changeColor("white");
+            person.moveHorizontal(-100);
+            person.moveVertical(50);
+            person.changeSize(60, 30);
+            person.makeVisible();
+
             drawn = true;
         }
     }
 
-    /**
-     * Change this picture to black/white display
-     */
+    
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
+        sky1.changeColor("white");
+        sky2.changeColor("white");
+        grass1.changeColor("black");
+        grass2.changeColor("black");
+        lake.changeColor("white");
+        mountain1.changeColor("black");
+        mountain2.changeColor("black");
+        mountain3.changeColor("black");
+        sun.changeColor("white");
+        person.changeColor("white");
     }
 
-    /**
-     * Change this picture to use color display
-     */
+    
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
+        sky1.changeColor("blue");
+        sky2.changeColor("blue");
+        grass1.changeColor("green");
+        grass2.changeColor("green");
+        lake.changeColor("blue");
+        mountain1.changeColor("black");
+        mountain2.changeColor("black");
+        mountain3.changeColor("black");
         sun.changeColor("yellow");
+        person.changeColor("white");
     }
 }
